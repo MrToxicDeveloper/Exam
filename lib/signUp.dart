@@ -47,7 +47,11 @@ class _FirstPageState extends State<FirstPage> {
                   height: 75,
                 ),
                 InkWell(
-                  onTap: () =>ReviewPage(),
+                  onTap: () {
+                    setState(() {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ReviewPage(),));
+                    });
+                  },
                   child: Container(
                     height: 80,
                     width: 275,
